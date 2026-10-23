@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #0A0A0A;
+  --color-charcoal: #121214;
+  --color-charcoal-card: #161618;
+  --color-charcoal-light: #1C1C20;
+  --color-zinc-border: #27272A;
+  --color-zinc-subtle: #1E1E22;
+  --color-silver: #E4E4E7;
+  --color-silver-light: #F4F4F5;
+  --color-silver-dim: #A1A1AA;
+  --color-platinum: #E2E8F0;
+  --color-ivory: #0A0A0A;
+  --color-ivory-light: #121214;
+  --color-espresso: #F4F4F5;
+  --color-espresso-dark: #E4E4E7;
+  --color-espresso-light: #A1A1AA;
+  --color-olive: #A1A1AA;
+  --color-olive-dark: #71717A;
+  --color-olive-light: #D4D4D8;
+  --color-terracotta: #FFFFFF;
+  --color-terracotta-dark: #E4E4E7;
+  --color-terracotta-light: #F4F4F5;
+  --color-taupe: #27272A;
+  --color-taupe-light: #3F3F46;
+  --color-gold: #E2E8F0;
+  --font-serif: var(--font-serif), Cormorant Garamond, Didot, "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-sans), Manrope, Inter, system-ui, sans-serif;
+}
+
+:root {
+  --background: #0A0A0A;
+  --foreground: #F4F4F5;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom editorial selection */
+::selection {
+  background-color: #FFFFFF;
+  color: #0A0A0A;
+}
+
+/* Editorial typography utilities */
+.font-editorial-serif {
+  font-family: var(--font-serif);
+}
+
+.font-editorial-sans {
+  font-family: var(--font-sans);
+}
+
+/* Thin hairline dividers */
+.border-hairline {
+  border-width: 1px;
+}
+
+/* Custom scrollbar for an upscale feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525B;
+}
+
+/* Subtle image zoom on hover */
+.img-zoom-hover {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-zoom-hover:hover {
+  transform: scale(1.04);
+}
